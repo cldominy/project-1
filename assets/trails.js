@@ -16,7 +16,7 @@ function generateDropdown(trails) {
 
     //  Dropdown menu creation
     $(".dropdown-content").append(
-      `<a class="trailTag"  id="locationTag${trailResponse.id}" data-index=${index}  data-id=${trailResponse.id} data-difficulty=${trailResponse.difficulty} data-length=${trailResponse.length}>${trailName}</a>`
+      `<a class="dropdown-item trailTag"  id="locationTag${trailResponse.id}" data-index=${index}  data-id=${trailResponse.id} data-difficulty=${trailResponse.difficulty} data-length=${trailResponse.length}>${trailName}</a>`
     );
     // On-Click for Trail Buttons. Clears previous trail information and adds new trail information
   }

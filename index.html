@@ -5,16 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HiketheTrailATX</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-    <link rel="stylesheet" href="https://www.jsdelivr.com/package/npm/bulma">
+    <!-- Bulma Styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <!-- Google Fonts -->
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Nav Bar -->
     <nav>
         <button>Subscribe</button>
         <button>Email Us</button>
     </nav>
+
+    <!-- Header -->
     <img class="main-img"
         src="https://www.michigan.org/sites/default/files/styles/15_6_desktop/public/UP%20Trail%20Shot%201%20Horizontal_hero%20crop.jpg?itok=IVh6rtE7&amp;timestamp=1595524341"
         data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd,gvK6lb;" alt="main page img">
@@ -28,79 +36,99 @@
             </p>
         </div>
         <br>
-        <div class="difficulty-buttons">
-            <div class="row">
+
+        <!-- Difficulty Buttons -->
+        <div class="row difficulty-buttons">
                 <p>Difficulty</p>
                 <div class="field is-grouped is-grouped-multiline">
                     <div class="control">
                         <div class="tags has-addons">
-                            <span class="tag is-dark">easy</span>
-                            <span class="tag is-primary"></span>
+                            <button class="button is-primary is-small" id="easyBttn">Easy</button>
                         </div>
                     </div>
-
                     <div class="field is-grouped is-grouped-multiline">
                         <div class="control">
                             <div class="tags has-addons">
-                                <span class="tag is-dark">moderate</span>
-                                <span class="tag is-warning"></span>
+                                <button class="button is-warning is-small" id="moderateBttn">Moderate</button>
                             </div>
                         </div>
                         <div class="field is-grouped is-grouped-multiline">
                             <div class="control">
                                 <div class="tags has-addons">
-                                    <span class="tag is-dark">hard</span>
-                                    <span class="tag is-danger"></span>
+                                    <button class="button is-danger is-small" id="hardBttn">Hard</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
 
-                <div class="distance-buttons">
-                    <div class="row">
-                        <p>Distacne</p>
+            <!-- Distance Buttons -->
+                <div class="row distance-buttons">
+                        <p>Distance</p>
                         <div class="field is-grouped is-grouped-multiline">
                             <div class="control">
-                                <div class="tags has-addons">
-                                    <span class="tag is-dark">0-1 miles</span>
-                                    <span class="tag is-primary"></span>
-                                </div>
+                                    <button class="button is-primary is-small" id="shortHike">0-1 Miles</button>
                             </div>
                             <div class="field is-grouped is-grouped-multiline">
                                 <div class="control">
                                     <div class="tags has-addons">
-                                        <span class="tag is-dark">1-5 miles</span>
-                                        <span class="tag is-warning"></span>
+                                        <button class="button is-warning is-small" id="mediumHike">1-5 Miles</button>
                                     </div>
                                 </div>
                             <div class="field is-grouped is-grouped-multiline">
                                 <div class="control">
                                     <div class="tags has-addons">
-                                        <span class="tag is-dark">+5 miles</span>
-                                        <span class="tag is-danger"></span>
+                                        <button class="button is-danger is-small" id="longHike">+5 Miles</button>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                </div>
 
+                <!-- Reset Button -->
+                <div class="row distance-buttons">
+                    <p>Reset</p>
+                    <div class="field is-grouped is-grouped-multiline">
+                        <div class="control">
+                                <button class="button is-small" id="reset">Reset</button>
                         </div>
                     </div>
+            </div>
+
+    <!-- Dropdown Menu -->
+        <div class="columns">
+            <div class="dropdown is-hoverable">
+                <div class="dropdown-trigger">
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <span>Austin Trails</span>
+                    <span class="icon is-small">
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
                 </div>
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                  <div class="dropdown-content scrollable-menu">
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <!-- About the Trails -->
+        <section class="section-trails">
+            <h1>About Your Trail</h1>
+            <!-- Trail Information Dynamically Generated -->
+            <div id="trail-info"></div>
+        </section>
     </section>
 
-    <section class="section-trails">
-        <!-- all the list of trailes goes here -->
-        <p>This section will have trails list</p>
-        <img src="https://static-30.sinclairstoryline.com/resources/media/73b5f951-8649-4e09-bf9b-b6ed5ab33f93-large16x9_ZilkerPark.jpg?1586269632819" class="temp" alt="temp pic">
-
-    </section>
+<!-- Map of the Trails -->
     <section class="section-map">
         <!-- map goes here -->
         <p>This section will include a map</p>
         <img src="https://austinot.com/wp-content/uploads/2015/03/Austin-Greenbelt-Access-Points-Map-1024x683.jpg" class="temp" alt="temp pic">
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
@@ -111,7 +139,15 @@
         </div>
     </footer>
 
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- Hiking Trail API to generate trail information -->
+    <script src="./assets/trails.js"></script>
+    <!-- Eris Mapping API to generate maps -->
+
+    
 </body>
 
 </html>
