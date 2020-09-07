@@ -1,0 +1,46 @@
+.main-img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    margin-left: 30px;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+#gMap {
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+   }
+
+.landing-header{
+    background-image: url(../media/static/background\ img.jpg);
+    background-size: cover;
+    padding: 20px;
+}
+
+.header-band{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+
+.dropdown-trigger{
+    width: 250px !important; 
+}
+
+/* .card.small {
+    height: auto;
+  }
+  .card.small .card-content {
+    height: auto;
+  }
+  .card.small .card-action {
+    position: relative;
+  }
+   */

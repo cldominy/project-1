@@ -16,7 +16,7 @@ function generateDropdown(trails) {
 
     //  Dropdown menu creation
     $(".dropdown-content").append(
-      `<a class="dropdown-item trailTag"  id="locationTag${trailResponse.id}" data-index=${index}  data-id=${trailResponse.id} data-difficulty=${trailResponse.difficulty} data-length=${trailResponse.length}>${trailName}</a>`
+      `<li><a class="dropdown-item trailTag"  id="locationTag${trailResponse.id}" data-index=${index}  data-id=${trailResponse.id} data-difficulty=${trailResponse.difficulty} data-length=${trailResponse.length} data-lon=${trailResponse.longitude} data-lan=${trailResponse.latitude}>${trailName}</a></li>`
     );
     // On-Click for Trail Buttons. Clears previous trail information and adds new trail information
   }
@@ -51,17 +51,18 @@ function populateTrail() {
 function generateTrails(trailResponse) {
   var nameTrail = $("<p>").text(trailResponse.name);
   var trailSummary = $("<p>").text(trailResponse.summary);
+  var imgURL = trailResponse.imgSmallMed
   var trailDifficulty = trailResponse.difficulty;
   //   Creating if/else for trail difficulty readability
   if (trailDifficulty === "green" || trailDifficulty === "greenBlue") {
-    var trailEasy = $("<p>").text("Difficulty: Easy");
+    var trailEasy = $("<a>").text("Difficulty: Easy");
   } else if (trailDifficulty === "blue" || trailDifficulty === "blueBlack") {
-    var trailModerate = $("<p>").text("Difficulty: Moderate");
+    var trailModerate = $("<a>").text("Difficulty: Moderate");
   } else {
-    var trailHard = $("<p>").text("Difficulty: Hard");
+    var trailHard = $("<a>").text("Difficulty: Hard");
   }
-  var trailLocation = $("<p>").text(trailResponse.location);
-  var trailLength = $("<p>").text(trailResponse.length + " mile");
+  var trailLocation = $("<a>").text(trailResponse.location);
+  var trailLength = $("<a>").text(trailResponse.length + " mile");
   var trailStatus = trailResponse.conditionStatus;
   //   Setting Trail Status and Information. Does not display trails with unknown statuses
   if (trailStatus === "Unknown") {
@@ -73,7 +74,8 @@ function generateTrails(trailResponse) {
   }
   // Adding trail information whenever a user selects a trail
   $(".trail-info").empty()
-  $("#trail-name").append(
+  $(".trail-img").attr("src", imgURL)
+  $(".card-title").append(
     nameTrail,
   );
   $("#trail-summary").append(
