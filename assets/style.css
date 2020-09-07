@@ -1,3 +1,7 @@
+nav{
+    background-color:  #10100fe9;
+
+}
 .main-img {
     width: 100%;
     margin: 0;
@@ -26,13 +30,21 @@ section {
 }
 
 .header-band{
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 6, 0, 0.5);
     border-radius: 5px;
 }
 
 .dropdown-trigger{
-    width: 250px !important; 
+    width: 250px !important;
 }
+
+.page-footer {
+    text-align: center;
+    background-color: #10100fe9;
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 
 /* .card.small {
     height: auto;
