@@ -67,29 +67,33 @@ function generateTrails(trailResponse) {
   if (trailStatus === "Unknown") {
     var statusNone = $("<p>").text("Status unavilable for this trail");
   } else {
-    var statusTrail = $("<p>").text("Status: " + trailResponse.conditionStatus);
-    var trailDetails = $("<p>").text(
-      "Status Details: " + trailResponse.conditionDetails
-    );
-    var trailDate = $("<p>").text(
-      "Last Updated: " +
-        moment(trailResponse.conditionDate).format("MMMM Do, YYYY")
-    );
+    var trailDate = moment(trailResponse.conditionDate).format("MMMM Do, YYYY")
+    var statusTrail = $("<p>").text("Status: " + trailResponse.conditionStatus + " as of " + trailDate);
+    
   }
   // Adding trail information whenever a user selects a trail
-  $("#trail-info").append(
+  $(".trail-info").empty()
+  $("#trail-name").append(
     nameTrail,
+  );
+  $("#trail-summary").append(
     trailSummary,
+  )
+  $("#status").append(
+    statusNone,
+    statusTrail,
+  )
+  $("#location").append(
+    trailLocation,
+  )
+  $("#difficulty").append(
     trailEasy,
     trailModerate,
     trailHard,
-    trailLocation,
+  )
+  $("#length").append(
     trailLength,
-    statusNone,
-    statusTrail,
-    trailDetails,
-    trailDate
-  );
+  )
 }
 
 // Filter Based on Difficulty

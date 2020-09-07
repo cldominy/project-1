@@ -37,89 +37,94 @@
         </div>
         <br>
 
+        <div class="container is-fluid">
+            <div class="columns" id="side-bar">
+                <div class="column is-one-third">
+    
         <!-- Difficulty Buttons -->
-        <div class="row difficulty-buttons">
+            <div class="column is-full">
                 <p>Difficulty</p>
-                <div class="field is-grouped is-grouped-multiline">
+                  <div class="is-centered field is-grouped is-grouped-multiline difficulty-buttons">
+                      <div class="control">
+                    <button class="button is-primary is-small" id="easyBttn">Easy</button>
+                    <button class="button is-warning is-small" id="moderateBttn">Moderate</button>
+                    <button class="button is-danger is-small" id="hardBttn">Hard</button>
+                </div>
+                </div>
+            </div>
+    
+                <!-- Distance Buttons -->
+                <div class="column is-full">
+                <p>Distance</p>
+                <div class="field is-grouped is-grouped-multiline distance-buttons">
                     <div class="control">
-                        <div class="tags has-addons">
-                            <button class="button is-primary is-small" id="easyBttn">Easy</button>
-                        </div>
-                    </div>
-                    <div class="field is-grouped is-grouped-multiline">
-                        <div class="control">
-                            <div class="tags has-addons">
-                                <button class="button is-warning is-small" id="moderateBttn">Moderate</button>
-                            </div>
-                        </div>
-                        <div class="field is-grouped is-grouped-multiline">
-                            <div class="control">
-                                <div class="tags has-addons">
-                                    <button class="button is-danger is-small" id="hardBttn">Hard</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <button class="button is-primary is-small" id="shortHike">0-1 Miles</button>
+                    <button class="button is-warning is-small" id="mediumHike">1-5 Miles</button>
+                    <button class="button is-danger is-small" id="longHike">+5 Miles</button>
+                </div>
             </div>
-
-            <!-- Distance Buttons -->
-                <div class="row distance-buttons">
-                        <p>Distance</p>
-                        <div class="field is-grouped is-grouped-multiline">
-                            <div class="control">
-                                    <button class="button is-primary is-small" id="shortHike">0-1 Miles</button>
-                            </div>
-                            <div class="field is-grouped is-grouped-multiline">
-                                <div class="control">
-                                    <div class="tags has-addons">
-                                        <button class="button is-warning is-small" id="mediumHike">1-5 Miles</button>
-                                    </div>
-                                </div>
-                            <div class="field is-grouped is-grouped-multiline">
-                                <div class="control">
-                                    <div class="tags has-addons">
-                                        <button class="button is-danger is-small" id="longHike">+5 Miles</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-
-                <!-- Reset Button -->
-                <div class="row distance-buttons">
-                    <p>Reset</p>
-                    <div class="field is-grouped is-grouped-multiline">
-                        <div class="control">
-                                <button class="button is-small" id="reset">Reset</button>
-                        </div>
-                    </div>
-            </div>
-
-    <!-- Dropdown Menu -->
-        <div class="columns">
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
-                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                    <span>Austin Trails</span>
-                    <span class="icon is-small">
-                      <i class="fas fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                  </button>
-                </div>
-                <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                  <div class="dropdown-content scrollable-menu">
-                  </div>
-                </div>
-              </div>
         </div>
-
-        <!-- About the Trails -->
-        <section class="section-trails">
-            <h1>About Your Trail</h1>
-            <!-- Trail Information Dynamically Generated -->
-            <div id="trail-info"></div>
+    
+    
+                <!-- Dropdown Menu -->
+                <div class="column is-full">
+                <div class="field is-grouped is-grouped-multiline distance-buttons">
+                    <div class="control">
+                <div class="dropdown is-hoverable">
+                    <div class="dropdown-trigger">
+                      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <span>Austin Trails</span>
+                        <span class="icon is-small">
+                          <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                      <div class="dropdown-content scrollable-menu">
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                <!-- Reset Button -->
+                <div class="control">
+                <div class="reset-button">
+                    <button class="button" id="reset">Reset</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+            <div class="column">
+                <div class="column">
+                <!-- Test Code -->
+                <div class="card">
+                    <header class="card-header">
+                      <p class="card-header-title trail-info" id="trail-name">
+                        About Your Trail!
+                      </p>
+                    </header>
+                    <div class="card-content">
+                      <div class="content">
+                        <p class="trail-info" id="trail-summary">Use the search functions to the left to find the perfect hike for your time in Austin! You can filter or scroll through the list of 20 different, unique Austin Trails!</p>
+                        <p class="trail-info" id="status"></p>
+                      </div>
+                    </div>
+                    <footer class="card-footer">
+                      <p class="card-footer-item trail-info" id="location"></p>
+                      <p class="card-footer-item trail-info" id="difficulty"></p>
+                      <p class="card-footer-item trail-info" id="length"></p>
+                    </footer>
+                  </div>
+                <!-- Test Code -->
+            </div>
+        </div>
+    </div>
+        </div>
+        </div>
         </section>
     </section>
+
 
 <!-- Map of the Trails -->
     <section class="section-map">
