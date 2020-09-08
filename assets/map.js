@@ -17,13 +17,13 @@ function initMap(lattitude, longitude) {
     var marker = new google.maps.Marker({position: trailLocation, map: map});
   // }
   
-  // var trailsList = document.getElementById("locationTag7023026")
-  // trailsList.addEventListener("click", function(){
-  //     var lat = parseFloat(this.getAttribute("data-lat"))
-  //     var lon = parseFloat(this.getAttribute("data-lon"))
-  //     console.log(lat)
-  //     initMap(lat, lon)
-  // })
+  var trailsList = document.getElementById("locationTag7023026")
+  trailsList.addEventListener("click", function(){
+      var lat = parseFloat(this.getAttribute("data-lat"))
+      var lon = parseFloat(this.getAttribute("data-lon"))
+      console.log(lat)
+      initMap(lat, lon)
+  })
 };
 
 function loadScript (){

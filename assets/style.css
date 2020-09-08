@@ -31,7 +31,11 @@ section {
 }
 
 .dropdown-trigger{
-    width: 250px !important; 
+    width: 200px !important; 
+}
+
+.buttons {
+    margin-top: 5px;
 }
 
 /* .card.small {
