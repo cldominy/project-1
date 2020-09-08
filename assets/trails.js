@@ -26,6 +26,7 @@ function generateDropdown(trails) {
     var index = $(this).data("index");
     var lat = parseFloat(this.getAttribute("data-lat"))
     var lon = parseFloat(this.getAttribute("data-lon"))
+    // Calling the map generation function from.js
     initMap(lat, lon)
 
     // Filters trails so that trail information is generated when clicked on
