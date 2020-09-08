@@ -15,28 +15,31 @@ section {
 }
 
 #gMap {
-    height: 400px;  /* The height is 400 pixels */
-    width: 100%;  /* The width is the width of the web page */
-   }
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
 
-.landing-header{
+.landing-header {
     background-image: url(../media/static/background\ img.jpg);
     background-size: cover;
     padding: 20px;
 }
 
-.header-band{
+.header-band {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 5px;
 }
 
-.dropdown-trigger{
-    width: 200px !important; 
+.dropdown-trigger {
+    width: 200px !important;
 }
 
 .buttons {
     margin-top: 5px;
 }
+
 
 /* .card.small {
     height: auto;
@@ -44,7 +47,11 @@ section {
   .card.small .card-content {
     height: auto;
   }
-  .card.small .card-action {
+  .card.medium .card-action {
     position: relative;
   }
    */
+
+.brand-logo {
+    font-family: 'Lobster', lobster-regular;
+}
