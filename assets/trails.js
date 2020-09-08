@@ -16,7 +16,7 @@ function generateDropdown(trails) {
 
     //  Dropdown menu creation
     $(".dropdown-content").append(
-      `<li><a class="dropdown-item trailTag"  id="locationTag${trailResponse.id}" data-index=${index}  data-id=${trailResponse.id} data-difficulty=${trailResponse.difficulty} data-length=${trailResponse.length} data-lon=${trailResponse.longitude} data-lan=${trailResponse.latitude}>${trailName}</a></li>`
+      `<li><a class="dropdown-item trailTag"  id="locationTag${trailResponse.id}" data-index=${index}  data-id=${trailResponse.id} data-difficulty=${trailResponse.difficulty} data-length=${trailResponse.length} data-lon=${trailResponse.longitude} data-lat=${trailResponse.latitude}>${trailName}</a></li>`
     );
     // On-Click for Trail Buttons. Clears previous trail information and adds new trail information
   }
@@ -24,6 +24,9 @@ function generateDropdown(trails) {
     $("#trail-info").empty("");
     var trailID = $(this).data("id");
     var index = $(this).data("index");
+    var lat = parseFloat(this.getAttribute("data-lat"))
+    var lon = parseFloat(this.getAttribute("data-lon"))
+    initMap(lat, lon)
 
     // Filters trails so that trail information is generated when clicked on
     var dropdownAPI = apiArray.filter(function (trail) {
@@ -161,3 +164,4 @@ $("#reset").on("click", function () {
 
 // Calling the function to assign API's object to a global variable
 populateTrail();
+

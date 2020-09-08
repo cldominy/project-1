@@ -1,12 +1,9 @@
-// Create the script tag, set the appropriate attributes
-var script = document.createElement('script');
-script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBN4MuTsPTRzJXZ8LtbbVacFdg3qNmRBxg&callback=initMap';
-script.defer = true;
+
 
 // Attach your callback function to the `window` object
-window.initMap = function(lattitude, longitude) {
+// window.initMap = function(lattitude, longitude) {
   // Initialize and add the map
-// function initMap(lattitude, longitude) {
+function initMap(lattitude, longitude) {
     // The location of Trail Location
     var trailLocation = {lat: 30.3451668, lng: -97.9260464};
     if (lattitude && longitude){
@@ -19,15 +16,25 @@ window.initMap = function(lattitude, longitude) {
     // The marker, positioned at Trail Location
     var marker = new google.maps.Marker({position: trailLocation, map: map});
   // }
-  document.getElementById("trailTag").addEventListener("click", function(){
-      var lat = parseFloat(this.getAttribute("data-lat"))
-      var lon = parseFloat(this.getAttribute("data-lon"))
-      console.log(lat)
-      initMap(lat, lon)
-  })
+  
+  // var trailsList = document.getElementById("locationTag7023026")
+  // trailsList.addEventListener("click", function(){
+  //     var lat = parseFloat(this.getAttribute("data-lat"))
+  //     var lon = parseFloat(this.getAttribute("data-lon"))
+  //     console.log(lat)
+  //     initMap(lat, lon)
+  // })
 };
 
+function loadScript (){
+// Create the script tag, set the appropriate attributes
+var script = document.createElement('script');
+script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBN4MuTsPTRzJXZ8LtbbVacFdg3qNmRBxg&callback=initMap';
+script.defer = true;
 // Append the 'script' element to 'head'
 document.head.appendChild(script);
+}
+
+window.onload = loadScript;
       
 
