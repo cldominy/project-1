@@ -59,13 +59,13 @@ function generateTrails(trailResponse) {
   var trailDifficulty = trailResponse.difficulty;
   //   Creating if/else for trail difficulty readability
   if (trailDifficulty === "green" || trailDifficulty === "greenBlue") {
-    var trailEasy = $("<a>").text("Difficulty: Easy");
+    var trailEasy = $("<a>").text("Difficulty: Easy | ");
   } else if (trailDifficulty === "blue" || trailDifficulty === "blueBlack") {
-    var trailModerate = $("<a>").text("Difficulty: Moderate");
+    var trailModerate = $("<a>").text("Difficulty: Moderate | ");
   } else {
-    var trailHard = $("<a>").text("Difficulty: Hard");
+    var trailHard = $("<a>").text("Difficulty: Hard | ");
   }
-  var trailLocation = $("<a>").text(trailResponse.location);
+  var trailLocation = $("<a>").text(trailResponse.location + " | ");
   var trailLength = $("<a>").text(trailResponse.length + " mile");
   var trailStatus = trailResponse.conditionStatus;
   //   Setting Trail Status and Information. Does not display trails with unknown statuses

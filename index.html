@@ -1,6 +1,4 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,107 +7,124 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Materialize Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <!-- jQuery JS -->
-    <script src=" https://code.jquery.com/jquery-3.4.1.min.js "></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js "></script>
-    <!-- Google Fonts -->
     <!-- Custom CSS -->
-    <link rel="stylesheet " href="./assets/style.css ">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
     <!-- Nav Bar -->
-    <nav class="light-green darken-2 ">
-        <div class="nav-wrapper container "><a href="index.html " class="brand-logo center ">HTTATX</a><a href="# " data-target="mobile-demo " class="sidenav-trigger "><i class="material-icons ">menu</i></a>
-            <ul class="right hide-on-med-and-down ">
-                <li><a href="https://github.com/cldominy/project-1 ">Github</a></li>
-                <li><a href="# ">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <!-- Mobile Nav Bar -->
-    <ul class="sidenav " id="mobile-demo ">
-        <li><a href="https://github.com/cldominy/project-1 ">Github</a></li>
-        <li><a href="# ">Contact</a></li>
-    </ul>
-    <!-- Header -->
-    <div class="landing-header z-depth-2 col m12 " id="index-banner ">
-        <div class="container header-band ">
-            <h1 class="header center black-text ">Hike The Trail ATX</h1>
-            <div class="row center ">
-                <h5 class="header col s12 black-text ">Find your perfect Austin trail and quickly see your next adventure using interactive mapping! </h5>
-            </div>
-        </div>
+    <nav class="light-green darken-2">
+        <div class="nav-wrapper container">
+          <a href="index.html" class="brand-logo center">HTTATX</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i>
+        </a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="https://github.com/cldominy/project-1">Github</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
     </div>
-    <!-- Generate Trail Information -->
-    <div class="container ">
-        <div class="section ">
-            <div class="row ">
-                <div class="col m4 s12 ">
-                    <div class="button-block ">
-                        <!-- Difficulty Buttons -->
-                        <p>Difficulty</p><a class="buttons waves-effect waves-light btn-small green darken-1 " id="easyBttn ">Easy</a><a class="buttons waves-effect waves-light btn-small yellow darken-1 " id="moderateBttn ">Moderate</a><a class="buttons waves-effect waves-light btn-small red darken-1 "
-                            id="hardBttn ">Hard</a>
-                        <!-- Distance Buttons -->
-                        <p>Distance</p><a class="buttons waves-effect waves-light btn-small green darken-1 " id="shortHike ">0-1 Miles</a><a class="buttons waves-effect waves-light btn-small yellow darken-1 " id="mediumHike ">1-5 Miles</a><a class="buttons waves-effect waves-light btn-small red darken-1 "
-                            id="longHike ">+5 Miles</a>
-                        <!-- Dropdown Menu -->
-                        <p>Trails List</p><a class=' buttons dropdown-trigger btn-small ' href='# ' data-target='dropdown1 '>Austin Trails</a>
-                        <!-- Dropdown List -->
-                        <ul id='dropdown1 ' class='dropdown-content scrollable-menu '></ul>
-                        <!-- Reset Button --><a class="buttons waves-effect waves-light btn-small " id="reset ">Reset</a></div>
-                </div>
-                <!-- Trail Information -->
-                <div class="col m8 s12 ">
-                    <div class="card medium horizontal ">
-                        <div class="card-image "><img class="trail-img responsive-img " src="./media/static/placeholder.jpg "></div>
-                        <div class="card-stacked ">
-                            <div class="card-content "><span class="card-title trail-info ">About Your Trail!</span>
-                                <p class="trail-info " id="trail-summary ">Use the search functions to the left to find the perfect hike for your time in Austin! You can filter or scroll through the list of 20 different, unique Austin Trails!</p><br>
-                                <p class="trail-info " id="status "></p>
-                            </div>
-                            <div class="card-action ">
-                                <a class="trail-info " id="location "></a>
-                                <a class="trail-info " id="difficulty "></a>
-                                <a class="trail-info " id="length "></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Map Section -->
-            <div class="row ">
-                <div id="gMap "></div>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    <!-- Footer -->
-    <footer class="page-footer light-green darken-2 ">
-        <div class="container ">
-            <div class="row ">
-                <div class="col l6 s12 ">
-                    <h5 class="white-text ">Hike The Trail ATX</h5>
-                    <p class="grey-text text-lighten-4 ">Created By Chris, Amanda, and Ji</a>. The source code is licensed <a href="http://opensource.org/licenses/mit-license.php ">MIT</a>.</p>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright ">
-            <div class="container ">CSS Framework by Materialize </div>
-        </div>
-    </footer>
-    <!-- Moment.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js "></script>
-    <!-- Materalize JS -->
-    <script src="./assets/materialize.js "></script>
-    <!-- Hiking Trail API to generate trail information -->
-    <script src="./assets/trails.js "></script>
-    <!-- Gooogle Maps API -->
-    <script src="./assets/map.js "></script>
-</body>
+</nav>
+<!-- Mobile Nav Bar -->
+<ul class="sidenav" id="mobile-demo">
+  <li><a href="https://github.com/cldominy/project-1">Github</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  </ul>
 
+<!-- Header -->
+<div class="landing-header z-depth-2 col m12" id="index-banner">
+    <div class="container header-band">
+        <h1 class="header center black-text">Hike The Trail ATX</h1>
+        <div class="row center">
+            <h5 class="header col s12 black-text">Find your perfect Austin trail and quickly see your next adventure using interactive mapping!
+            </h5>
+        </div>
+    </div>
+</div>
+<!-- Generate Trail Information -->
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <div class="col m4 s12">
+                  <div class="button-block">
+                    <!-- Difficulty Buttons -->
+                    <p>Difficulty</p>
+                    <a class="buttons waves-effect waves-light btn-small green darken-1" id="easyBttn">Easy</a>
+                    <a class="buttons waves-effect waves-light btn-small yellow darken-1" id="moderateBttn">Moderate</a>
+                    <a class="buttons waves-effect waves-light btn-small red darken-1" id="hardBttn">Hard</a>
+                    <!-- Distance Buttons -->
+                    <p>Distance</p>
+                      <a class="buttons waves-effect waves-light btn-small green darken-1" id="shortHike">0-1 Miles</a>
+                      <a class="buttons waves-effect waves-light btn-small yellow darken-1" id="mediumHike">1-5 Miles</a>
+                      <a class="buttons waves-effect waves-light btn-small red darken-1" id="longHike">+5 Miles</a>
+                    <!-- Dropdown Menu -->
+                    <p>Trails List</p>
+                    <a class='buttons dropdown-trigger btn-small' href='#' data-target='dropdown1'>Austin Trails</a>
+                    <!-- Dropdown List -->
+                    <ul id='dropdown1' class='dropdown-content scrollable-menu'>
+                      </ul>
+                    <!-- Reset Button -->
+                    <a class="buttons waves-effect waves-light btn-small" id="reset">Reset</a>
+                </div>
+            </div>
+            <!-- Trail Information -->
+            <div class="col m8 s12">
+                <div class="card  horizontal">
+                    <div class="card-image">
+                        <img class="trail-img responsive-img" src="./media/static/placeholder.jpg">
+                      </div>
+                      <div class="card-stacked">
+                    <div class="card-content">
+                      <span class="card-title trail-info">About Your Trail!</span>
+                      <p class= "trail-info" id="trail-summary">Use the search functions to the left to find the perfect hike for your time in Austin! You can filter or scroll through the list of 20 different, unique Austin Trails!</p>
+                      <br>
+                      <p class="trail-info" id="status"></p>
+                      <span class="trail-info extra-trail" id="location"></span>
+                      <span class="trail-info extra-trail" id="difficulty"></span>
+                      <span class="trail-info extra-trail" id="length"></span>
+                    </div>
+                          </div>
+                          </div>
+                        </div>
+                <!-- Map Section -->
+                <div class="row">
+                    <div id="gMap"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<footer class="page-footer light-green darken-2">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Hike The Trail ATX</h5>
+          <p class="grey-text text-lighten-4">Created By Chris, Amanda, and Ji</a>. The
+            source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      CSS Framework by Materialize
+      </div>
+    </div>
+    </footer>
+      
+    <!-- Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- Materalize JS -->
+    <script src="./assets/materialize.js"></script>
+    <!-- Hiking Trail API to generate trail information -->
+    <script src="./assets/trails.js"></script>
+    <!-- Gooogle Maps API -->
+    <script src="./assets/map.js"></script>
+</body>
 </html>

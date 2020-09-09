@@ -19,14 +19,14 @@ function initMap(lattitude, longitude) {
 };
 
 function loadScript (){
-// Create the script tag, set the appropriate attributes
-var script = document.createElement('script');
-script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBN4MuTsPTRzJXZ8LtbbVacFdg3qNmRBxg&callback=initMap';
-script.defer = true;
-// Append the 'script' element to 'head'
-document.head.appendChild(script);
-}
-
-window.onload = loadScript;
+  // Create the script tag, set the appropriate attributes
+  var script = document.createElement('script');
+  script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBN4MuTsPTRzJXZ8LtbbVacFdg3qNmRBxg&callback=initMap';
+  script.defer = true;
+  // Append the 'script' element to 'head'
+  document.head.appendChild(script);
+  }
+  
+  window.onload = loadScript;
       
 
