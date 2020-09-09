@@ -23,7 +23,7 @@ The collaborators are the following:
 # Wesbite Preview
 The following gif provides an overivew of the functions the website as to offer! It creates all information dynamically by calling on Hiking Project's API and updating the Google Map's API.
 
-![Preview of the planner]()
+![Preview of the planner](./media/dynamic/preview.gif)
 
 # Future Developments
 The following are ideas for future changes for the website: 
